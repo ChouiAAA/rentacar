@@ -1,0 +1,43 @@
+button{
+    border: 1px solid $second-element-color;
+    border-radius: 0.1rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1.5rem;
+    background: $main-bg-color;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover{
+        border: 1px solid $main-element-color;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $main-text-color;
+}
+
+.call-to-action{
+    border : 1px solid $second-text-color;
+    background-color: transparent;
+
+    background-image: linear-gradient( to left,$second-text-color 50%, transparent 50%);
+    background-size: 200%;
+    transition: all 0.2s;
+
+    & > a {
+        color: $second-text-color;
+    }
+
+    &:hover{
+ 
+        border : 1px solid $second-text-color;
+        background-position: 100%;
+
+        & > a {
+            color: $main-text-color;
+        }
+
+    }
+
+}

@@ -1,0 +1,21 @@
+$main-bg-color : #090909;
+$main-text-color : white;
+$second-text-color : #f86e18;
+$main-element-color : #b4aeae;
+$second-element-color : #767373;
+
+
+$main-font-family: 'Montserrat', sans-serif;
+$second-font-family: 'Radley', serif;
+$brand-font-family: 'Seaweed Script', cursive;
+
+
+$breakpoints: (
+    700 : 700px,
+    900 : 900px,
+    1200 : 1200px,
+    1600 : 1600px,
+    1900 : 1900px
+);
+
+$shake-intensity: 2%;

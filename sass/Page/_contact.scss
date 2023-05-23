@@ -1,0 +1,116 @@
+body{
+    text-align: center;
+}
+
+.contact-form{
+    width: 50%;
+    margin: 5rem auto;
+    text-align: start;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr) 10rem 3.5rem;
+    grid-column-gap: 1rem;
+
+    @include responsive-1600{
+        width: 60%;
+    }
+
+    @include responsive-1200{
+        width: 80%;
+    }
+
+    @include responsive-900{
+        width: 90%;
+    }
+
+    @include responsive-700{
+        width: 80%;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr) 10rem 3.5rem;
+    }
+
+
+    &__message{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+
+        @include responsive-700{
+            grid-column: 1/-1;
+            grid-row: 7/8;
+        }
+    }
+
+    &__input-container{
+        margin: 0.4rem 0;
+    }
+
+    &__button{
+        grid-column: 1/-1;
+        grid-row: 5/6;
+        color: $second-text-color;
+
+        @include responsive-700{
+            grid-column: 1/-1;
+            grid-row: 8/9;
+        }
+
+
+        &:disabled{
+            background: $main-element-color;
+            border: $main-element-color solid 1px ;
+            color: $main-text-color ;
+        }
+
+        &:hover{
+            color: $main-text-color;
+        }
+
+
+    }
+
+
+}
+
+input, select, textarea{
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    margin: 0.2rem 0;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+
+    font-size: 1rem;
+    font-family: $main-font-family;
+    transition: background-color 500ms;
+
+    &:focus{
+        border: 2px solid $second-text-color;
+    }
+
+    // &:not(:focus):invalid{
+    //     background: $second-text-color;
+    // }
+
+}
+
+.colored-input{
+        background: $second-text-color;
+}
+
+.message-box{
+    background-color: $main-text-color;
+    color: $main-bg-color;
+
+    width: 50%;
+    margin: 5rem auto;
+    padding: 5rem;
+}
+
+
+.error-message{
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}

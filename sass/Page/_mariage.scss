@@ -1,0 +1,32 @@
+/* HEADER SECTION ------------------------------------------------ */
+
+.mariage-header{
+    @include header;
+    color: $main-bg-color;
+    
+    background-image: url("../../Ressources/banniere-mariage.png");
+
+    @include responsive-700{
+        display: none;
+    }
+}
+
+
+
+
+/* PLAISIR SECTION ------------------------------------------------ */
+
+
+
+
+
+.plaisir{
+
+    width: 90%;
+    margin: 5rem auto;
+    text-align: center;
+
+    & > p{
+        padding: 1rem 0 2rem;
+    }
+}

@@ -1,0 +1,249 @@
+/* HEADER SECTION ------------------------------------------------ */
+
+.services-header{
+    @include header;
+
+    background-image: url("../../Ressources/banniere-services.png");
+
+    @include responsive-700{
+        display: none;
+    }
+}
+
+/* SERVICES SECTION ------------------------------------------------ */
+
+.services{
+    width: 90%;
+    margin: 5rem auto;
+
+    &__global-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @include responsive-900 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__card{
+        width: 20rem;
+        height: 37rem;
+        margin-top: 3rem;
+
+        display: flex;
+        flex-direction: column;
+
+        @include white-border;
+
+        &:hover{
+            @include animation-translateY;
+        }
+
+        & > img {
+            width: 20rem;
+            height: auto;
+            border-radius: 0.5rem 0.5rem 0 0 ;
+            padding-right: 2px;
+        }
+    }
+
+    &__card-title{
+        @include space-title;   
+        padding: 2rem 1rem 1rem;
+    }
+
+    &__card-description{
+        font-family: $second-font-family;
+        padding: 0 1rem;
+    }
+
+    &__button-container{
+        margin: 1.5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__driver{
+        margin: 5rem 0;
+    }
+
+
+}
+
+/* DRIVER SECTION ------------------------------------------------ */
+
+.driver{
+    background-color: $second-element-color;
+    background-image: url(../../Ressources/bannière-chauffeur.png);
+    @include paralax;
+
+    &__container{
+        width: 90%;
+        margin: 5rem auto;
+        padding: 3rem 0;
+
+        display: flex;
+        align-items: center;
+
+        @include responsive-700{
+            flex-direction: column;
+        }
+
+        &--left{
+            width: 60%;
+            padding-right: 1rem;
+
+            @include responsive-700{
+                width: 80%;
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        &--right{
+            width: 40%;
+            text-align: center;
+            @include responsive-700{
+                width: 80%;
+                padding-top: 1rem
+            }
+            
+        }
+    }
+
+    &__title{
+        @include middle-title;
+    }
+}
+
+/* ASSURANCE SECTION ------------------------------------------------ */
+.assurance{
+    width: 90%;
+    margin: 5rem auto;
+
+    &__global-container{
+        width: 100%;
+        text-align: center;
+    }
+
+    &__icone-container{
+        display: flex; 
+        align-items: center;
+        margin-bottom: 0.8rem;
+
+        & > svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        & > h4 {
+            @include space-title;
+            padding: 1rem 0 1rem 1rem;
+        }
+    }
+
+    &__card-container{
+        width: 30%;
+        margin: 2rem 0;
+        color : $main-element-color;
+
+        &--right{
+            text-align: end;
+            margin-left: 20% ;
+
+            @include responsive-700{
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        &--left{
+            text-align: start;
+            margin-left: 50% ;
+
+            @include responsive-700{
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        @include responsive-700{
+            width: 80%;
+            margin: 3rem auto;
+            color: $main-text-color;
+        }
+
+        &:hover{
+            color: $main-text-color;
+
+            .assurance__svg {
+                & > path {
+                    fill: $main-text-color;
+                }
+            }
+
+        }
+    }
+
+    &__button-container{
+        padding:3rem 0;
+    }
+
+
+}
+
+/* ANDMORE SECTION ------------------------------------------------ */
+
+.andmore{
+
+    background-color: $second-element-color;
+    color: $main-bg-color;
+
+    &__global-container{
+        width: 90%;
+        margin: 5rem auto 0;
+
+        & > h2{
+            color: $main-bg-color;
+        }
+
+    }
+
+    &__plus-container{
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive-700{
+            flex-direction: column;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__one-plus-conatainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0 5rem;
+
+        @include responsive-700{
+            margin: 1rem auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        & > img {
+            width: 5rem;
+            padding: 1rem 0 ;
+            
+            &:hover{
+                @include animation-scale;
+            }
+
+
+        }
+    }
+}

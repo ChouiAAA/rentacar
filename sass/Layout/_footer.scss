@@ -1,0 +1,108 @@
+.footer{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 6rem 1rem;
+
+    @include responsive-700{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    &__left-container{
+        grid-row: 1/2;
+        grid-column: 1/2;
+
+        @include responsive-700{
+            grid-row: 1/2;
+            grid-column: 1/2; 
+            text-align: center;
+        }
+
+        & > h5{
+             @include footer-subtitle;
+        }
+
+
+    }
+
+    &__brand{ 
+        grid-row: 1/2;
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: center;
+
+        & > span {
+            font-family: $main-font-family;
+            font-weight: 100;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: $second-text-color;
+        }
+
+        @include responsive-700{
+            grid-row: 2/3;
+            grid-column: 1/2; 
+            text-align: center;
+        }
+
+    }
+
+
+    &__right-container{
+        grid-row: 1/2;
+        grid-column: 3/4;
+        text-align: end;
+
+        & > h5{
+            @include footer-subtitle;
+        }
+
+        & > a{
+            @include footer-subtitle;
+
+            &:hover{
+                color: $second-text-color;
+            }
+        }
+
+        @include responsive-700{
+            grid-row: 3/4;
+            grid-column: 1/2; 
+            text-align: center;
+        }
+
+    }
+
+    &__social-container{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 0.4rem;
+
+        & > img{
+            width: 3em;
+            height: 3rem;
+            padding: 0.5rem;
+
+            &:hover{
+                @include animation-scale;
+            }
+        }
+
+        @include responsive-700{
+            justify-content: center;
+        }
+    }
+
+    &__legal-mentions{
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        justify-self: center;
+
+        @include responsive-700{
+            grid-row: 4/5;
+            grid-column: 1/2; 
+        }
+    }
+
+
+}

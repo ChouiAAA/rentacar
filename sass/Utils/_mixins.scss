@@ -1,0 +1,94 @@
+/* STYLE ------------------------------------------------ */
+
+@mixin white-border{
+    box-shadow: rgba(135, 135, 135, 0.2) 0px 2px 8px 0px;
+    border: 1px solid $second-element-color;
+    border-radius: 0.5rem;
+
+    &:hover{
+        box-shadow: rgba(135, 135, 135, 0.3) 0px 4px 6px 0px;
+    }
+}
+
+@mixin paralax{
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 5rem 0;
+}
+
+@mixin middle-title{
+    padding: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+@mixin space-title{
+    font-family: $main-font-family ;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing : 0.2rem;
+}
+
+@mixin footer-subtitle{
+    font-family: $main-font-family;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+@mixin header{
+    height: 100vh;
+    min-height: 25rem;
+    text-align: center;
+    padding-top: 150px;
+    border-bottom: 1px solid $second-element-color;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* ANIMATION ------------------------------------------------ */
+
+
+@mixin animation-scale{
+    transform: scale(1.2);
+    transition: all ease-out;
+}
+
+
+@mixin animation-translateY{
+    transform: translateY(-0.2rem);
+}
+
+
+/* RESPONSIVE  ------------------------------------------------*/
+
+
+@mixin responsive-1900{
+    @media screen and (max-width: map-get($breakpoints, 1900)){
+        @content ;
+    }
+}
+
+@mixin responsive-1600{
+    @media screen and (max-width: map-get($breakpoints, 1600)){
+        @content ;
+    }
+}
+
+@mixin responsive-1200{
+    @media screen and (max-width: map-get($breakpoints, 1200)){
+        @content ;
+    }
+}
+
+@mixin responsive-900{
+    @media screen and (max-width: map-get($breakpoints, 900)){
+        @content ;
+    }
+}
+
+@mixin responsive-700{
+    @media screen and (max-width: map-get($breakpoints, 700)){
+        @content ;
+    }
+}

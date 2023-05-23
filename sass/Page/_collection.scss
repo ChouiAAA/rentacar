@@ -1,0 +1,133 @@
+/* HEADER SECTION ------------------------------------------------ */
+
+.collection-header{
+    @include header;
+
+    background-image: url("../../Ressources/collection-header.png");
+
+    @include responsive-700{
+        display: none;
+    }
+}
+
+/* TOPOLOGY SECTION ------------------------------------------------ */
+
+.collection-typology__global-container{
+    margin-top: 5rem;
+}
+
+.collection-typology__container{
+    width: 60%;
+    height: 20rem;
+    margin: 3rem auto;
+    @include white-border;
+    display : flex;
+
+    @include responsive-1600{
+        width: 70%;
+    }
+
+    @include responsive-1200{
+        width: 80%;
+    }
+
+    
+    @include responsive-900{
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    &-text{
+        padding: 2rem;
+        width: 60%;
+
+        @include responsive-900{
+            width: 100%;
+            order: 2;
+        }
+
+        &-button{
+            margin: 2rem 0;
+        }
+    }
+
+    &-img{
+        width: 40%;
+
+        @include responsive-900{
+            width: 100%;
+            order: 1;
+        }
+
+        & > img {
+            padding-bottom: 2px;
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 0 0.5rem 0.5rem 0;
+
+            @include responsive-900{
+                width: 100%;
+                padding-bottom: 0;
+                border-radius: 0.5rem 0.5rem 0 0;
+            }
+        }
+    }
+
+    &-left > div{
+
+        & > img{
+            border-radius: 0.5rem 0 0 0.5rem;
+
+            @include responsive-900{
+                border-radius: 0.5rem 0.5rem 0 0;
+            }
+        }
+    }
+
+}
+
+/* CAROUSEL SECTION ------------------------------------------------ */
+
+.carousel__global-container{
+    width: 100%;
+    margin: 8rem auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & > img{
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+
+        @include responsive-1900{
+            width: 30rem;
+            height: auto;
+        }
+
+        @include responsive-1200{
+            width: 20rem;
+            height: 20rem
+        }
+
+        @include responsive-700{
+           width: 80%;
+           height: auto;
+           padding: 2rem 0;
+        }
+    }
+}
+
+.rent-now{
+    &__global-container{
+        width: 90%;
+        margin: 5rem auto;
+        text-align: center;
+    }
+
+    &__button-container{
+        margin-top: 2rem;
+    }
+}

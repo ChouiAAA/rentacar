@@ -1,0 +1,121 @@
+nav{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.all-items-nav{
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+.item-nav {
+    font-family: $main-font-family;
+    color: $main-text-color;
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 300;
+    margin: 0 15px;
+    position: relative;
+}
+
+.all-items-nav::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $main-text-color;
+    display: none;
+}
+
+.contact-nav{
+
+    position: fixed;
+    right: 1rem;
+    top:1rem;
+    
+        & > img {
+            width: 2rem;
+            height: 2rem;
+        }
+    
+    &:hover{
+        @include animation-scale;
+    }
+}
+
+.logo-menu{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    display: none;
+}
+
+/* Animation au survol */
+
+.item-nav::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $second-element-color;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(33%);
+    transition: transform 0.2s ease-out;
+}
+
+.item-nav:hover::before{
+    transform: scaleX(100%);
+    background-color: $main-text-color;
+}
+
+
+@media screen and (max-width: 700px){
+    .logo-menu{
+        display: block;
+    }
+
+    .all-items-nav{
+        display: none;
+        background: $main-bg-color;
+
+    }
+
+    .all-items-nav.active{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .items-list.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-nav{
+        padding: 1rem ;
+        font-size: 1rem;
+    }
+
+    .item-nav::before{
+        display: none;
+    }
+
+    .item-nav:hover, .item-nav:focus{
+        color: $main-element-color;
+    }
+
+    .all-items-nav::after{
+        display: block;
+    }
+
+    .contact-nav{
+        position: relative;
+        margin-left: 1.6rem;
+        margin-bottom: 2rem;
+    }
+}

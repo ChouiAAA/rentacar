@@ -1,0 +1,40 @@
+.animation{
+    
+    &--center{
+        opacity: 0;
+        transform: translateY(-3rem);
+        transition: opacity 0.5s 0.3s ease-out,
+        transform 0.5s 0.3s ease-out
+    }
+
+    &--right{
+        opacity: 0;
+        transform: translateX(3rem);
+        transition: opacity 0.5s 0.3s ease-out,
+        transform 0.5s 0.3s ease-out
+    }
+
+    &--left{
+        opacity: 0;
+        transform: translateX(-3rem);
+        transition: opacity 0.5s 0.3s ease-out,
+        transform 0.5s 0.3s ease-out
+    }
+
+}
+
+
+.animation--center.active{
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+.animation--right.active{
+    opacity: 1;
+    transform: translateX(0rem);
+}
+
+.animation--left.active{
+    opacity: 1;
+    transform: translateX(0rem);
+}
